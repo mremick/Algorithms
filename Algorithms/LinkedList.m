@@ -45,5 +45,11 @@
     [self.firstNode deleteNode:node];
 }
 
+- (void)removeDuplicatesLinkedClass:(NSMutableArray *)array
+{
+    [self.firstNode removeDuplicates:array andPreviousNode:self.firstNode];
+}
+
+
 
 @end

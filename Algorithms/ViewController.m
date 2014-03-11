@@ -38,30 +38,37 @@
     
     for (int i = 0; i < 30; i++) {
         
-        if (i == 15) {
-            [list addNodeToBeginning:node300];
-        }
+//        if (i == 15) {
+//            [list addNodeToBeginning:node300];
+//        }
         
-        Node *node = [[Node alloc] initWithData:arc4random() % 500];
+        Node *node = [[Node alloc] initWithData:arc4random() % 5];
         [list addNodeToBeginning:node];
     }
     
-    Node *node69 = [[Node alloc] initWithData:69];
-    [list addNodeToBeginning:node69];
-    
-    Node *node100 = [[Node alloc] initWithData:100];
-    
-    [list addNodeToEnd:node100];
+//    Node *node69 = [[Node alloc] initWithData:69];
+//    [list addNodeToBeginning:node69];
+//    
+//    Node *node100 = [[Node alloc] initWithData:100];
+//    
+//    [list addNodeToEnd:node100];
     
     [list printNodes];
     
-    Node *searchedNode = [list searchForNode:node69];
+//    Node *searchedNode = [list searchForNode:node69];
     
-    NSLog(@"Search:%d",searchedNode.data);
+//    NSLog(@"Search:%d",searchedNode.data);
     
     NSLog(@"--------------------------------------");
     
-    [list deleteNode:node300];
+//    [list deleteNode:node300];
+    
+    NSMutableArray *arrayChecker = [NSMutableArray new];
+    
+    
+    
+    [list removeDuplicatesLinkedClass:arrayChecker];
+    
     
     [list printNodes];
     
@@ -74,6 +81,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

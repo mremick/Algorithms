@@ -57,17 +57,26 @@
     }
 }
 
-- (void)removeDuplicates
+- (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev
 {
-    NSMutableArray *ASCIIIndexedArray = [NSMutableArray new];
-    
-    if ([ASCIIIndexedArray objectAtIndex:self.data]) {
-        [self deleteNode:self];
-    } else {
-        [ASCIIIndexedArray insertObject:@1 atIndex:self.data];
-        
+    if (!self) {
+        return;
     }
+    
+    else if (![array containsObject:[NSString stringWithFormat:@"%d",self.data]]) {
+        [array addObject:[NSString stringWithFormat:@"%d",self.data]];
+        [self.next removeDuplicates:array andPreviousNode:self];
+    }
+    
+    
+    else  {
+        prev.next = prev.next.next;
+        [self.next removeDuplicates:array andPreviousNode:self];
+    }
+    
+    
 }
+
 
 
 

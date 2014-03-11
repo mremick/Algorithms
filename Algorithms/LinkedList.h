@@ -19,5 +19,6 @@
 - (void)printNodes;
 - (Node *)searchForNode:(Node *)node;
 - (void)deleteNode:(Node *)node;
+- (void)removeDuplicatesLinkedClass:(NSMutableArray *)array;
 
 @end

@@ -20,7 +20,7 @@
 - (Node *)searchForNode:(Node *)node;
 - (void)addNodeToEnd:(Node *)node;
 - (void)deleteNode:(Node *)node;
-- (void)removeDuplicates;
+- (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev;
 
 
 
