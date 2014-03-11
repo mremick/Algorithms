@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Node.h"
 
 @interface LinkedList : NSObject
+
+@property (strong,nonatomic) Node *firstNode;
+
+
+- (void)addNodeToBeginning:(Node *)node;
+- (void)addNodeToEnd:(Node *)node;
+- (void)printNodes;
+- (Node *)searchForNode:(Node *)node;
+- (void)deleteNode:(Node *)node;
 
 @end

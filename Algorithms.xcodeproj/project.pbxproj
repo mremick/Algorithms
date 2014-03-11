@@ -21,6 +21,9 @@
 		3E3F5F7718CEAA7500AA1E1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5918CEAA7500AA1E1B /* UIKit.framework */; };
 		3E3F5F7F18CEAA7500AA1E1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F5F7D18CEAA7500AA1E1B /* InfoPlist.strings */; };
 		3E3F5F8118CEAA7500AA1E1B /* AlgorithmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8018CEAA7500AA1E1B /* AlgorithmsTests.m */; };
+		3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8B18CEAA8F00AA1E1B /* Node.m */; };
+		3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */; };
+		3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		3E3F5F7C18CEAA7500AA1E1B /* AlgorithmsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlgorithmsTests-Info.plist"; sourceTree = "<group>"; };
 		3E3F5F7E18CEAA7500AA1E1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E3F5F8018CEAA7500AA1E1B /* AlgorithmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsTests.m; sourceTree = "<group>"; };
+		3E3F5F8A18CEAA8F00AA1E1B /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		3E3F5F8B18CEAA8F00AA1E1B /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		3E3F5F8D18CEAA9C00AA1E1B /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		3E3F5F9018CEAB2200AA1E1B /* ArraysAndStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArraysAndStrings.h; sourceTree = "<group>"; };
+		3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraysAndStrings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 				3E3F5F6718CEAA7500AA1E1B /* Main.storyboard */,
 				3E3F5F6A18CEAA7500AA1E1B /* ViewController.h */,
 				3E3F5F6B18CEAA7500AA1E1B /* ViewController.m */,
+				3E3F5F8A18CEAA8F00AA1E1B /* Node.h */,
+				3E3F5F8B18CEAA8F00AA1E1B /* Node.m */,
+				3E3F5F8D18CEAA9C00AA1E1B /* LinkedList.h */,
+				3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */,
+				3E3F5F9018CEAB2200AA1E1B /* ArraysAndStrings.h */,
+				3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */,
 				3E3F5F6D18CEAA7500AA1E1B /* Images.xcassets */,
 				3E3F5F5C18CEAA7500AA1E1B /* Supporting Files */,
 			);
@@ -252,6 +267,9 @@
 				3E3F5F6C18CEAA7500AA1E1B /* ViewController.m in Sources */,
 				3E3F5F6618CEAA7500AA1E1B /* AppDelegate.m in Sources */,
 				3E3F5F6218CEAA7500AA1E1B /* main.m in Sources */,
+				3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */,
+				3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */,
+				3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

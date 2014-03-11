@@ -10,4 +10,9 @@
 
 @interface ArraysAndStrings : NSObject
 
++ (void)uniqueCharacter:(NSString *)string;
++ (NSString *)reverseString:(NSString *)string;
++ (BOOL)isPermutation:(NSString *)string andAnotherString:(NSString *)anotherString;
++ (NSString *)stringCompression:(NSString *)string;
+
 @end

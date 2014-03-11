@@ -10,4 +10,20 @@
 
 @interface Node : NSObject
 
+@property (nonatomic) int data;
+@property (strong,nonatomic) Node *next;
+
+- (id)initWithData:(int)data;
+
+- (void)printNode;
+
+- (Node *)searchForNode:(Node *)node;
+- (void)addNodeToEnd:(Node *)node;
+- (void)deleteNode:(Node *)node;
+- (void)removeDuplicates;
+
+
+
+
 @end
+
