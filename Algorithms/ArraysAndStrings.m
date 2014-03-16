@@ -117,5 +117,17 @@
     return compressedString;
 }
 
++ (void)fizzbuzz:(int)i {
+    
+    if (i % 3 == 0 && i % 5 == 0) {
+        NSLog(@"%d: fizzbuzz",i);
+    } else if (i % 3 == 0) {
+        NSLog(@"%d: fizz",i);
+    } else if (i % 5 == 0) {
+        NSLog(@"%d: buzz",i);
+    }
+}
+
+
 
 @end

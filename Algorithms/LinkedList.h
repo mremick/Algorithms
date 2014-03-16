@@ -20,5 +20,6 @@
 - (Node *)searchForNode:(Node *)node;
 - (void)deleteNode:(Node *)node;
 - (void)removeDuplicatesLinkedClass:(NSMutableArray *)array;
-- (void)deleteNodeOnlyGivenTheNode:(Node *)node; 
+- (void)deleteNodeOnlyGivenTheNode:(Node *)node;
+- (void)partitionLinkedListBasedOnX:(int)x; 
 @end

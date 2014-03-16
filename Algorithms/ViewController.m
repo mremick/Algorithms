@@ -37,26 +37,23 @@
 
     
     
-    for (int i = 1; i < 6; i++) {
+    for (int i = 1; i < 41; i++) {
         
-        if (i == 3) {
-            [list addNodeToBeginning:nod3];
-        } else {
-            Node *node = [[Node alloc] initWithData:i];
-            [list addNodeToBeginning:node];
-        }
-        
+        Node *node = [[Node alloc] initWithData:arc4random() % 50];
+        [list addNodeToBeginning:node];
     }
+    
+    [list partitionLinkedListBasedOnX:20];
     
     
 
-    [list printNodes];
-    
-    NSLog(@"----------------------------------");
-    
-    [list deleteNodeOnlyGivenTheNode:nod3];
-    
-    [list printNodes];
+//    [list printNodes];
+//    
+//    NSLog(@"----------------------------------");
+//    
+//    [list partitionLinkedListBasedOnX:10];
+//    
+//    [list printNodes];
     
 
 }

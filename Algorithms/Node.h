@@ -21,7 +21,9 @@
 - (void)addNodeToEnd:(Node *)node;
 - (void)deleteNode:(Node *)node;
 - (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev;
-- (void)removeMiddleNode:(Node *)node; 
+- (void)removeMiddleNode:(Node *)node;
+- (void)partitionLinkedListBasedOnX:(int)x;
+
 
 
 

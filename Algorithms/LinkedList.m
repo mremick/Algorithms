@@ -63,6 +63,39 @@
     node.next = node.next.next;
 }
 
+- (void)partitionLinkedListBasedOnX:(int)x
+{
+    /* all nodes less that than x come before all nodes greater than or equal to x */
+
+    LinkedList *lessThanList = [LinkedList new];
+    LinkedList *greaterThanList = [LinkedList new];
+    
+    Node *node = [[Node alloc] init];
+    node = self.firstNode;
+    
+    while (node != nil) {
+        
+        Node *next = node.next;
+        node.next = nil; 
+        
+        NSLog(@"DATA:%d",node.data);
+        
+        if (node.data >= x) {
+            [greaterThanList addNodeToBeginning:node];
+        } else {
+            [lessThanList addNodeToBeginning:node];
+        }
+        
+        node = next;
+    }
+        
+    [lessThanList addNodeToEnd:greaterThanList.firstNode];
+    
+    [lessThanList printNodes];
+    
+}
+
+
 
 
 
