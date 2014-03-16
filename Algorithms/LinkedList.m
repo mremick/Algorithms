@@ -50,6 +50,22 @@
     [self.firstNode removeDuplicates:array andPreviousNode:self.firstNode];
 }
 
+- (void)deleteMiddleNode:(Node *)node;
+{
+    [self.firstNode removeMiddleNode:node]; 
+}
+- (void)deleteNodeOnlyGivenTheNode:(Node *)node
+{
+    //pass the information from the next node to the node given
+    node.data = node.next.data;
+    
+    //delete the next node
+    node.next = node.next.next;
+}
+
+
+
+
 
 
 @end

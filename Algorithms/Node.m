@@ -59,7 +59,7 @@
 
 - (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev
 {
-    if (!self) {
+    if (!self.next) {
         return;
     }
     
@@ -70,12 +70,28 @@
     
     
     else  {
-        prev.next = prev.next.next;
+        prev.next = self.next;
         [self.next removeDuplicates:array andPreviousNode:self];
     }
     
     
 }
+
+- (void)removeMiddleNode:(Node *)node
+{
+    if (!self.next) {
+        return;
+    }
+    
+    else if (self.next.data == node.data) {
+        self.next = self.next.next;
+    }
+    
+    else {
+        [self.next removeMiddleNode:node];
+    }
+}
+
 
 
 
