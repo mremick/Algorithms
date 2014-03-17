@@ -10,6 +10,7 @@
 #import "ArraysAndStrings.h"
 #import "Node.h"
 #import "LinkedList.h"
+#import "Sorts.h"
 
 @interface ViewController ()
 
@@ -33,19 +34,24 @@
     
     
     LinkedList *list = [[LinkedList alloc] init];
+    LinkedList *list2 = [[LinkedList alloc] init];
     Node *nod3 = [[Node alloc] initWithData:3];
 
+    NSMutableArray *randomArray = [NSMutableArray new];
     
-    
-    for (int i = 1; i < 41; i++) {
+    for (int i = 1; i < 30; i++) {
         
-        Node *node = [[Node alloc] initWithData:arc4random() % 50];
-        [list addNodeToBeginning:node];
+        NSNumber *number = [NSNumber numberWithInt:arc4random() % 30];
+        [randomArray addObject:number];
+        
     }
     
-    [list partitionLinkedListBasedOnX:20];
+    NSLog(@"BEFORE: %@",randomArray);
+    
+    NSLog(@"AFTER: %@",[Sorts quickSort:randomArray]);
     
     
+//    [LinkedList addTwoLinkedLists:list andList2:list2]; 
 
 //    [list printNodes];
 //    

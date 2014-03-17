@@ -95,6 +95,38 @@
     
 }
 
++ (void)addTwoLinkedLists:(LinkedList *)list1 andList2:(LinkedList *)list2;
+{
+    NSString *list1Number = @"";
+    NSString *list2Number = @"";
+    
+    Node *node1 = list1.firstNode;
+    Node *node2 = list2.firstNode;
+    
+    [list1 printNodes];
+    [list2 printNodes];
+
+    
+    while (node1 != nil && node2 != nil) {
+        Node *node1Next = node1.next;
+        Node *node2Next = node2.next;
+        
+        node1.next = nil;
+        node2.next = nil;
+        
+        NSString *tempNumber1 = [NSString stringWithFormat:@"%d",node1.data];
+        NSString *tempNumber2 = [NSString stringWithFormat:@"%d",node2.data];
+        
+        [list1Number stringByAppendingString:tempNumber1];
+        [list2Number stringByAppendingString:tempNumber2];
+        
+        node1 = node1Next;
+        node2 = node2Next;
+    }
+    
+    NSLog(@"1: %@",list1Number);
+    NSLog(@"2: %@",list2Number); 
+}
 
 
 

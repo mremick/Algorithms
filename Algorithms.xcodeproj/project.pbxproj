@@ -24,6 +24,7 @@
 		3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8B18CEAA8F00AA1E1B /* Node.m */; };
 		3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */; };
 		3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */; };
+		3E5D886818D6948B00361EC8 /* Sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D886718D6948B00361EC8 /* Sorts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		3E3F5F9018CEAB2200AA1E1B /* ArraysAndStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArraysAndStrings.h; sourceTree = "<group>"; };
 		3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraysAndStrings.m; sourceTree = "<group>"; };
+		3E5D886618D6948B00361EC8 /* Sorts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sorts.h; sourceTree = "<group>"; };
+		3E5D886718D6948B00361EC8 /* Sorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sorts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */,
 				3E3F5F9018CEAB2200AA1E1B /* ArraysAndStrings.h */,
 				3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */,
+				3E5D886618D6948B00361EC8 /* Sorts.h */,
+				3E5D886718D6948B00361EC8 /* Sorts.m */,
 				3E3F5F6D18CEAA7500AA1E1B /* Images.xcassets */,
 				3E3F5F5C18CEAA7500AA1E1B /* Supporting Files */,
 			);
@@ -269,6 +274,7 @@
 				3E3F5F6218CEAA7500AA1E1B /* main.m in Sources */,
 				3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */,
 				3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */,
+				3E5D886818D6948B00361EC8 /* Sorts.m in Sources */,
 				3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +484,7 @@
 				3E3F5F8618CEAA7500AA1E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E3F5F8718CEAA7500AA1E1B /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +493,7 @@
 				3E3F5F8918CEAA7500AA1E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

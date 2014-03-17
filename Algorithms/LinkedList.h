@@ -21,5 +21,6 @@
 - (void)deleteNode:(Node *)node;
 - (void)removeDuplicatesLinkedClass:(NSMutableArray *)array;
 - (void)deleteNodeOnlyGivenTheNode:(Node *)node;
-- (void)partitionLinkedListBasedOnX:(int)x; 
+- (void)partitionLinkedListBasedOnX:(int)x;
++ (void)addTwoLinkedLists:(LinkedList *)list1 andList2:(LinkedList *)list2;
 @end
