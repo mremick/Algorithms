@@ -21,13 +21,18 @@
     return self;
 }
 
-- (void)printNode
++ (void)printNodes:(Node *)head
 {
-    NSLog(@"--> | %d || -->",self.data);
+    //NSLog(@"--> | %d || -->",self.data);
     
-    if (self.next) {
-        [self.next printNode];
+    Node *n = head;
+    
+    while (n != nil) {
+        NSLog(@"--> | %d || -->",n.data);
+        n = n.next;
     }
+    
+    
 }
 
 - (Node *)searchForNode:(Node *)node
@@ -39,42 +44,62 @@
     }
 }
 
-- (void)addNodeToEnd:(Node *)node
+- (void)addNodeToEnd:(int)d
 {
-    if (self.next == Nil) {
-        self.next = node;
-    } else {
-        [self.next addNodeToEnd:node];
+    Node *end = [[Node alloc] initWithData:d];
+    Node *n = self;
+    
+    while (n.next != nil) {
+        n = n.next;
     }
     
+    
+    n.next = end;
+    
 }
-- (void)deleteNode:(Node *)node
+- (Node *)deleteNode:(Node *)head andDataToDelete:(int)d
 {
-    if (self.next.data == node.data) {
-        self.next = self.next.next;
-    } else {
-        [self.next deleteNode:node];
+    Node *n = head;
+    
+    if (n.data == d) {
+        return n.next; /* removed head */
     }
+    
+    while (n.next != nil) {
+        if (n.next.data == d) {
+            n.next = n.next.next;
+            return head; /* head didn't change */
+        }
+        
+        n = n.next;
+    }
+    
+    return head;
 }
 
-- (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev
+- (void)removeDuplicates:(Node *)head
 {
-    if (!self.next) {
-        return;
+    
+    NSHashTable *hashtable = [NSHashTable new];
+    
+    Node *n = head;
+    Node *previous = nil;
+    
+    while (n != nil) {
+        
+        if ([hashtable containsObject:[NSNumber numberWithInt:n.data]]) {
+            previous.next = n.next;
+        } else {
+            [hashtable addObject:[NSNumber numberWithInt:n.data]];
+            previous = n;
+            
+        }
+        
+        n = n.next;
+        
     }
     
-    else if (![array containsObject:[NSString stringWithFormat:@"%d",self.data]]) {
-        [array addObject:[NSString stringWithFormat:@"%d",self.data]];
-        [self.next removeDuplicates:array andPreviousNode:self];
-    }
-    
-    
-    else  {
-        prev.next = self.next;
-        [self.next removeDuplicates:array andPreviousNode:self];
-    }
-    
-    
+    NSLog(@"%@",hashtable);
 }
 
 - (void)removeMiddleNode:(Node *)node

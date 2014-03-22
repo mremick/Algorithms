@@ -11,6 +11,8 @@
 @interface Sorts : NSObject
 
 + (NSMutableArray *)quickSort:(NSMutableArray *)unsortedArray;
++ (NSMutableArray *)mergeSort:(NSMutableArray *)unsortedArray;
+
 
 
 @end

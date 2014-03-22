@@ -23,7 +23,7 @@
 
 - (void)addNodeToEnd:(Node *)node
 {
-    [self.firstNode addNodeToEnd:node];
+    //[self.firstNode addNodeToEnd:node];
 }
 
 - (void)printNodes
@@ -31,7 +31,7 @@
     if (!self.firstNode) {
         return;
     } else {
-        [self.firstNode printNode];
+        //[self.firstNode printNode];
     }
 }
 
@@ -42,12 +42,12 @@
 
 - (void)deleteNode:(Node *)node
 {
-    [self.firstNode deleteNode:node];
+    //[self.firstNode deleteNode:node];
 }
 
 - (void)removeDuplicatesLinkedClass:(NSMutableArray *)array
 {
-    [self.firstNode removeDuplicates:array andPreviousNode:self.firstNode];
+    //[self.firstNode removeDuplicates:array andPreviousNode:self.firstNode];
 }
 
 - (void)deleteMiddleNode:(Node *)node;

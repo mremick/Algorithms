@@ -15,12 +15,13 @@
 
 - (id)initWithData:(int)data;
 
-- (void)printNode;
++ (void)printNodes:(Node *)head;
 
 - (Node *)searchForNode:(Node *)node;
-- (void)addNodeToEnd:(Node *)node;
-- (void)deleteNode:(Node *)node;
-- (void)removeDuplicates:(NSMutableArray *)array andPreviousNode:(Node *)prev;
+- (void)addNodeToEnd:(int)d;
+- (Node *)deleteNode:(Node *)head andDataToDelete:(int)d;
++ (void)removeDuplicates:(Node *)head;
+
 - (void)removeMiddleNode:(Node *)node;
 - (void)partitionLinkedListBasedOnX:(int)x;
 

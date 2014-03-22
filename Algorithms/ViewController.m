@@ -20,46 +20,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-//    NSString *hello1 = [NSString stringWithFormat:@"lhelo"];
-//    NSString *hello = [NSString stringWithFormat:@"hello"];
-//    NSString *randomString = [NSString stringWithFormat:@"oh hey there"];
-    
-    //[ArraysAndStrings uniqueCharacter:alphabet];
-    //NSLog(@"%@",[ArraysAndStrings reverseString:hello]);
-    //NSLog(@"%d",[ArraysAndStrings isPermutation:hello andAnotherString:randomString]);
-    //NSLog(@"%@",[ArraysAndStrings stringCompression:@"aaabbbccc"]);
-    
-    
-    LinkedList *list = [[LinkedList alloc] init];
-    LinkedList *list2 = [[LinkedList alloc] init];
-    Node *nod3 = [[Node alloc] initWithData:3];
-
-    NSMutableArray *randomArray = [NSMutableArray new];
-    
-    for (int i = 1; i < 30; i++) {
-        
-        NSNumber *number = [NSNumber numberWithInt:arc4random() % 30];
-        [randomArray addObject:number];
-        
-    }
-    
-    NSLog(@"BEFORE: %@",randomArray);
-    
-    NSLog(@"AFTER: %@",[Sorts quickSort:randomArray]);
-    
-    
-//    [LinkedList addTwoLinkedLists:list andList2:list2]; 
-
-//    [list printNodes];
-//    
-//    NSLog(@"----------------------------------");
-//    
-//    [list partitionLinkedListBasedOnX:10];
-//    
-//    [list printNodes];
+    Node *l1 = [[Node alloc]initWithData:7];
+    [l1 addNodeToEnd:1];
+    [l1 addNodeToEnd:6];
     
 
 }
@@ -69,6 +32,103 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)deleteMiddle:(Node *)n
+{
+    n.data = n.next.data;
+    n.next = n.next.next;
+}
+
+- (Node *)partition:(Node *)n andData:(int)d
+{
+    Node *gth;
+    Node *lth;
+    Node *lte;
+    
+    while (n != nil) {
+        
+        Node *next = n.next;
+        n.next = nil;
+
+        
+        if (n.data >= d) {
+            if (!gth) {
+                gth = n;
+            } else {
+                n.next = gth;
+                gth = n;
+            }
+        } else {
+            if (!lth) {
+                lth = n;
+                lte = n;
+            } else {
+                n.next = lth;
+                lth = n;
+            }
+        }
+        
+        n = next;
+    }
+    
+    lte.next = gth;
+    
+    return lth;
+}
+
+- (Node *)add:(Node *)l1 otherNode:(Node *)l2 andCarry:(int)d
+{
+    Node *product = nil;
+    
+    while (l1 != nil || l2 != nil) {
+        int x = l1.data + l2.data;
+        
+        if (d == 1) {
+            x += d;
+            d = 0;
+        }
+        
+        if (x >= 10) {
+            d = 1;
+            x %= 10;
+        }
+        
+        if (!product) {
+            product = [[Node alloc] initWithData:x];
+        } else if (!product.next) {
+            product.next = [[Node alloc] initWithData:x];
+        } else {
+            product.next.next = [[Node alloc] initWithData:x];
+        }
+        
+        x = 0;
+        l1 = l1.next;
+        l2 = l2.next;
+    }
+    
+    return product;
+}
+
+- (Node *)loop:(Node *)head
+{
+    Node *n = head;
+    NSHashTable *hash = [[NSHashTable alloc] init];
+    
+    while (n != nil) {
+        if ([hash containsObject:n]) {
+            return n;
+        } else {
+            [hash addObject:n];
+        }
+        
+        n = n.next;
+    }
+    
+    return nil;
+}
+
+
 
 
 
