@@ -25,6 +25,8 @@
 		3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F8E18CEAA9C00AA1E1B /* LinkedList.m */; };
 		3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */; };
 		3E5D886818D6948B00361EC8 /* Sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D886718D6948B00361EC8 /* Sorts.m */; };
+		3E5DA1FD18E6237A00951671 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DA1FC18E6237A00951671 /* SetOfStacks.m */; };
+		3EB12BB018DD2DF100306A3F /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB12BAF18DD2DF100306A3F /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraysAndStrings.m; sourceTree = "<group>"; };
 		3E5D886618D6948B00361EC8 /* Sorts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sorts.h; sourceTree = "<group>"; };
 		3E5D886718D6948B00361EC8 /* Sorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sorts.m; sourceTree = "<group>"; };
+		3E5DA1FB18E6237A00951671 /* SetOfStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetOfStacks.h; sourceTree = "<group>"; };
+		3E5DA1FC18E6237A00951671 /* SetOfStacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetOfStacks.m; sourceTree = "<group>"; };
+		3EB12BAE18DD2DF100306A3F /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		3EB12BAF18DD2DF100306A3F /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,10 @@
 				3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */,
 				3E5D886618D6948B00361EC8 /* Sorts.h */,
 				3E5D886718D6948B00361EC8 /* Sorts.m */,
+				3EB12BAE18DD2DF100306A3F /* Stack.h */,
+				3EB12BAF18DD2DF100306A3F /* Stack.m */,
+				3E5DA1FB18E6237A00951671 /* SetOfStacks.h */,
+				3E5DA1FC18E6237A00951671 /* SetOfStacks.m */,
 				3E3F5F6D18CEAA7500AA1E1B /* Images.xcassets */,
 				3E3F5F5C18CEAA7500AA1E1B /* Supporting Files */,
 			);
@@ -269,10 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB12BB018DD2DF100306A3F /* Stack.m in Sources */,
 				3E3F5F6C18CEAA7500AA1E1B /* ViewController.m in Sources */,
 				3E3F5F6618CEAA7500AA1E1B /* AppDelegate.m in Sources */,
 				3E3F5F6218CEAA7500AA1E1B /* main.m in Sources */,
 				3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */,
+				3E5DA1FD18E6237A00951671 /* SetOfStacks.m in Sources */,
 				3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */,
 				3E5D886818D6948B00361EC8 /* Sorts.m in Sources */,
 				3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */,

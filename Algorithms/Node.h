@@ -12,6 +12,7 @@
 
 @property (nonatomic) int data;
 @property (strong,nonatomic) Node *next;
+@property (nonatomic) int min; 
 
 - (id)initWithData:(int)data;
 

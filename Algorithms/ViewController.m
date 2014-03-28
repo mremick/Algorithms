@@ -11,6 +11,8 @@
 #import "Node.h"
 #import "LinkedList.h"
 #import "Sorts.h"
+#import "Stack.h"
+#import "SetOfStacks.h"
 
 @interface ViewController ()
 
@@ -20,9 +22,15 @@
 
 - (void)viewDidLoad
 {
-    Node *l1 = [[Node alloc]initWithData:7];
-    [l1 addNodeToEnd:1];
-    [l1 addNodeToEnd:6];
+    Stack *stack = [[Stack alloc] init];
+    
+    for (int i = 0; i < 30; i++) {
+        [stack push:(arc4random() % 30) + 1];
+    }
+    
+    [stack printStack];
+    
+    NSLog(@"MIN: %d",[stack min]);
     
 
 }
