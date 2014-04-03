@@ -14,6 +14,6 @@
 + (NSString *)reverseString:(NSString *)string;
 + (BOOL)isPermutation:(NSString *)string andAnotherString:(NSString *)anotherString;
 + (NSString *)stringCompression:(NSString *)string;
-+ (void)fizzbuzz:(int)i; 
++ (void)fizzbuzz:(int)i;
 
 @end

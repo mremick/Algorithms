@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Node.h"
 
 @interface SetOfStacks : NSObject
 
@@ -15,6 +16,9 @@
 - (int)popAtIndex:(int)index; 
 @property (nonatomic) int index;
 @property (nonatomic) int stackLength;
+@property (strong,nonatomic) Node *top; 
+
 @property (strong,nonatomic) NSMutableArray *stacks;
+- (id)init; 
 
 @end

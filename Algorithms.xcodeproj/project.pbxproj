@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3330FA18EA1CEC00924A05 /* Union.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3330F918EA1CEC00924A05 /* Union.m */; };
+		3E3330FD18EB403100924A05 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3330FC18EB403100924A05 /* TreeNode.m */; };
+		3E33310018EB410600924A05 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3330FF18EB410600924A05 /* BinarySearchTree.m */; };
+		3E33310318EE2A5500924A05 /* SymbolTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E33310218EE2A5500924A05 /* SymbolTable.m */; };
 		3E3F5F5618CEAA7500AA1E1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5518CEAA7500AA1E1B /* Foundation.framework */; };
 		3E3F5F5818CEAA7500AA1E1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5718CEAA7500AA1E1B /* CoreGraphics.framework */; };
 		3E3F5F5A18CEAA7500AA1E1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5918CEAA7500AA1E1B /* UIKit.framework */; };
@@ -26,6 +30,7 @@
 		3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */; };
 		3E5D886818D6948B00361EC8 /* Sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D886718D6948B00361EC8 /* Sorts.m */; };
 		3E5DA1FD18E6237A00951671 /* SetOfStacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DA1FC18E6237A00951671 /* SetOfStacks.m */; };
+		3E5DA20018E6573E00951671 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DA1FF18E6573E00951671 /* Queue.m */; };
 		3EB12BB018DD2DF100306A3F /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB12BAF18DD2DF100306A3F /* Stack.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3330F818EA1CEC00924A05 /* Union.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Union.h; sourceTree = "<group>"; };
+		3E3330F918EA1CEC00924A05 /* Union.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Union.m; sourceTree = "<group>"; };
+		3E3330FB18EB403100924A05 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		3E3330FC18EB403100924A05 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
+		3E3330FE18EB410600924A05 /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		3E3330FF18EB410600924A05 /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
+		3E33310118EE2A5500924A05 /* SymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTable.h; sourceTree = "<group>"; };
+		3E33310218EE2A5500924A05 /* SymbolTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTable.m; sourceTree = "<group>"; };
 		3E3F5F5218CEAA7500AA1E1B /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3F5F5518CEAA7500AA1E1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E3F5F5718CEAA7500AA1E1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +82,8 @@
 		3E5D886718D6948B00361EC8 /* Sorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sorts.m; sourceTree = "<group>"; };
 		3E5DA1FB18E6237A00951671 /* SetOfStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetOfStacks.h; sourceTree = "<group>"; };
 		3E5DA1FC18E6237A00951671 /* SetOfStacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetOfStacks.m; sourceTree = "<group>"; };
+		3E5DA1FE18E6573E00951671 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		3E5DA1FF18E6573E00951671 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		3EB12BAE18DD2DF100306A3F /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		3EB12BAF18DD2DF100306A3F /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,10 +158,20 @@
 				3E3F5F9118CEAB2200AA1E1B /* ArraysAndStrings.m */,
 				3E5D886618D6948B00361EC8 /* Sorts.h */,
 				3E5D886718D6948B00361EC8 /* Sorts.m */,
+				3E3330F818EA1CEC00924A05 /* Union.h */,
+				3E3330F918EA1CEC00924A05 /* Union.m */,
 				3EB12BAE18DD2DF100306A3F /* Stack.h */,
 				3EB12BAF18DD2DF100306A3F /* Stack.m */,
 				3E5DA1FB18E6237A00951671 /* SetOfStacks.h */,
 				3E5DA1FC18E6237A00951671 /* SetOfStacks.m */,
+				3E5DA1FE18E6573E00951671 /* Queue.h */,
+				3E5DA1FF18E6573E00951671 /* Queue.m */,
+				3E3330FB18EB403100924A05 /* TreeNode.h */,
+				3E3330FC18EB403100924A05 /* TreeNode.m */,
+				3E3330FE18EB410600924A05 /* BinarySearchTree.h */,
+				3E3330FF18EB410600924A05 /* BinarySearchTree.m */,
+				3E33310118EE2A5500924A05 /* SymbolTable.h */,
+				3E33310218EE2A5500924A05 /* SymbolTable.m */,
 				3E3F5F6D18CEAA7500AA1E1B /* Images.xcassets */,
 				3E3F5F5C18CEAA7500AA1E1B /* Supporting Files */,
 			);
@@ -281,13 +306,18 @@
 			files = (
 				3EB12BB018DD2DF100306A3F /* Stack.m in Sources */,
 				3E3F5F6C18CEAA7500AA1E1B /* ViewController.m in Sources */,
+				3E3330FA18EA1CEC00924A05 /* Union.m in Sources */,
 				3E3F5F6618CEAA7500AA1E1B /* AppDelegate.m in Sources */,
 				3E3F5F6218CEAA7500AA1E1B /* main.m in Sources */,
 				3E3F5F8F18CEAA9C00AA1E1B /* LinkedList.m in Sources */,
+				3E33310318EE2A5500924A05 /* SymbolTable.m in Sources */,
+				3E5DA20018E6573E00951671 /* Queue.m in Sources */,
 				3E5DA1FD18E6237A00951671 /* SetOfStacks.m in Sources */,
 				3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */,
 				3E5D886818D6948B00361EC8 /* Sorts.m in Sources */,
 				3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */,
+				3E33310018EB410600924A05 /* BinarySearchTree.m in Sources */,
+				3E3330FD18EB403100924A05 /* TreeNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,9 @@
 #import "Sorts.h"
 #import "Stack.h"
 #import "SetOfStacks.h"
+#import "TreeNode.h"
+#import "BinarySearchTree.h"
+#import "Queue.h"
 
 @interface ViewController ()
 
@@ -22,18 +25,99 @@
 
 - (void)viewDidLoad
 {
-    Stack *stack = [[Stack alloc] init];
+    BinarySearchTree *BST = [[BinarySearchTree alloc] init];
+    [BST addNode:10 andNode:nil];
+    TreeNode *root = BST.root;
     
-    for (int i = 0; i < 30; i++) {
-        [stack push:(arc4random() % 30) + 1];
-    }
+    [BST addNode:6 andNode:root];
+    [BST addNode:14 andNode:root];
+    [BST addNode:5 andNode:root];
+    [BST addNode:8 andNode:root];
+    [BST addNode:11 andNode:root];
+    [BST addNode:18 andNode:root];
+
+    //[BST deleteNode:14 andNode:root];
     
-    [stack printStack];
+    Queue *queue = [[Queue alloc] init];
+    [queue enqueue:1];
+    [queue enqueue:2];
+    [queue enqueue:3];
+    [queue enqueue:4];
+    [queue enqueue:5];
+    [queue enqueue:6];
+    [queue enqueue:7];
+    [queue enqueue:8];
+    [queue enqueue:9];
+    [queue enqueue:10];
+    [queue enqueue:11];
+    [queue enqueue:12];
+    [queue enqueue:13];
+    [queue enqueue:14];
+    [queue enqueue:15];
+
     
-    NSLog(@"MIN: %d",[stack min]);
+    [queue dequeue];
+    [queue enqueue:20];
+    
+    [queue printQueue];
+
+    
     
 
 }
+
+- (void)hanoi:(Stack *)stack1 andStack2:(Stack *)stack2
+{
+    if (stack1.top.data < stack2.top.data || stack2.top == nil) {
+        [stack2 push:stack1.top.data];
+        [stack1 pop];
+    } else if (stack2.top.data < stack1.top.data || stack1.top == nil) {
+        [stack1 push:stack2.top.data];
+        [stack2 pop];
+    }
+}
+
+- (void)hanoiFinal:(Stack *)stack1 andStack2:(Stack *)stack2 andStack3:(Stack *)stack3
+{
+    
+    int i = 0;
+    
+    do {
+        
+        
+        [self hanoi:stack1 andStack2:stack2];
+        NSLog(@"3 in stack 3: %d",stack3.top.next.next.data);
+        
+        if (stack3.top.data == 3) {
+            i =1;
+            return;
+        }
+
+        [self hanoi:stack2 andStack2:stack3];
+
+        if (stack3.top.data == 3) {
+            i =1;
+            return;
+        }
+
+        [self hanoi:stack1 andStack2:stack3];
+
+        if (stack3.top.data == 3) {
+            i =1;
+            return;
+        }
+
+
+    } while (i == 0);
+    
+        
+
+    NSLog(@"1 in stack 3: %d",stack3.top.data);
+    NSLog(@"2 in stack 3: %d",stack3.top.next.data);
+    NSLog(@"3 in stack 3: %d",stack3.top.next.next.data);
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
