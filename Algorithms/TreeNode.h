@@ -17,5 +17,6 @@
 
 @property (nonatomic) int data;
 @property (nonatomic) int depth;
+@property (nonatomic) int count; 
 
 @end

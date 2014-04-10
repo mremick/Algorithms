@@ -18,7 +18,18 @@
         return item;
     }
     
-    return 0;
+    return NULL;
+}
+
+-(char)popChar
+{
+    if (self.top != nil) {
+        char character = self.top.character;
+        self.top = self.top.next;
+        return character;
+    }
+    
+    return NULL;
 }
 
 - (void)push:(int)item
@@ -35,6 +46,19 @@
         } else {
             t.min = self.top.min;
         }
+        
+        t.next = self.top;
+        self.top = t;
+    }
+}
+
+- (void)pushChar:(char)character
+{
+    Node *t = [[Node alloc] initWithChar:character];
+    
+    if (!self.top) {
+        self.top = t;
+    } else {
         
         t.next = self.top;
         self.top = t;

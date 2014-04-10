@@ -16,6 +16,29 @@
 - (void)deleteNode:(int)data andNode:(TreeNode *)node;
 - (void)printTree:(TreeNode *)node;
 - (BOOL)isBST:(TreeNode *)node;
+- (NSObject *)findNode:(int)data;
+- (void)put:(int)data;
+- (int)size;
+- (int)rank:(int)data;
+- (void)deleteMin;
+- (void)deleteValue:(int)data;
+- (TreeNode *)getMin:(TreeNode *)node; 
+
+//root first, next node's left, then right
+- (void)printPreOrder:(TreeNode *)node;
+
+//in order from least to greatest
+- (void)printInOrder:(TreeNode *)node;
+
+//print the highest left node with no left node, move down the tree printing left nodes
+//once the bottom is reached print that right node, move back up the root priting each node
+//then, same for right side
+- (void)printPostOrder:(TreeNode *)node;
+
+- (TreeNode *)bstFromArray:(int[])args andBeginning:(int)start andEnd:(int)end;
+- (TreeNode *)createMininalBST:(int[])array andEnd:(int)end;
+
+
 
 
 @end

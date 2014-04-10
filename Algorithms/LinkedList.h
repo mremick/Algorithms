@@ -23,4 +23,9 @@
 - (void)deleteNodeOnlyGivenTheNode:(Node *)node;
 - (void)partitionLinkedListBasedOnX:(int)x;
 + (void)addTwoLinkedLists:(LinkedList *)list1 andList2:(LinkedList *)list2;
+- (int)count;
+- (BOOL)isLoop;
+- (int)getMidpoint;
+- (int)findTheKthElement:(int)i;
+- (BOOL)isPalindrome; 
 @end

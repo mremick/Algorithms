@@ -7,6 +7,8 @@
 //
 
 #import "ArraysAndStrings.h"
+#import "Stack.h"
+
 
 @implementation ArraysAndStrings
 
@@ -127,6 +129,67 @@
         NSLog(@"%d: buzz",i);
     }
 }
+
++ (int)maxDifference:(int[])arr andArraySize:(int)arraySize
+{
+    int maxDifference = arr[1] - arr[0];
+    int minElement = arr[0];
+    
+    for (int i = 0; i < arraySize; i++) {
+        
+        if (arr[i] < minElement) {
+            minElement = arr[i];
+        }
+        
+        if (arr[i] - minElement > maxDifference) {
+            maxDifference = arr[i] - minElement;
+        }
+    
+    }
+    
+    return maxDifference;
+}
+
++ (BOOL)openersAndClosers:(NSString *)string
+{
+    BOOL isClosed = YES;
+    Stack *stack = [[Stack alloc] init];
+    
+    for (int i = 0; i < string.length; i++) {
+        char character = [string characterAtIndex:i];
+        
+        if (character == '{' || character == '[' || character == '(') {
+            [stack pushChar:character];
+        }
+        
+        if (character == '}' || character == ']' || character == ')') {
+            char checker = [stack popChar];
+            if (character == '}') {
+                if (checker != '{') {
+                    return NO;
+                }
+            }
+            if (character == ']') {
+                if (checker != '[') {
+                    return NO;
+                }
+            }
+            if (character == ')') {
+                if (checker != '(') {
+                    return NO;
+                }
+            }
+        }
+        
+    }
+
+    
+    return isClosed; 
+}
+
+
+
+
 
 
 

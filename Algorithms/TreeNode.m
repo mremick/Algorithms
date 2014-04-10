@@ -8,6 +8,10 @@
 
 #import "TreeNode.h"
 
+@interface TreeNode()
+
+@end
+
 @implementation TreeNode
 
 - (id)initWithData:(int)data;

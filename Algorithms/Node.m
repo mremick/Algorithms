@@ -21,6 +21,16 @@
     return self;
 }
 
+- (id)initWithChar:(char)character
+{
+    if (self = [super init]) {
+        self.character = character;
+        self.next = nil;
+    }
+    
+    return self;
+}
+
 + (void)printNodes:(Node *)head
 {
     //NSLog(@"--> | %d || -->",self.data);

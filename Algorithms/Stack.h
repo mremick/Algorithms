@@ -16,6 +16,9 @@
 @property (strong,nonatomic) Stack *minStack; 
 - (int)pop;
 - (void)push:(int)item;
+- (void)pushChar:(char)character;
+- (char)popChar;
+
 - (int)peek;
 - (int)min;
 - (void)printStack; 

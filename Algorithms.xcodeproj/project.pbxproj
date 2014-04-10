@@ -11,6 +11,7 @@
 		3E3330FD18EB403100924A05 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3330FC18EB403100924A05 /* TreeNode.m */; };
 		3E33310018EB410600924A05 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3330FF18EB410600924A05 /* BinarySearchTree.m */; };
 		3E33310318EE2A5500924A05 /* SymbolTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E33310218EE2A5500924A05 /* SymbolTable.m */; };
+		3E3BFC2A18F626110043879E /* StackFromTwoQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BFC2918F626110043879E /* StackFromTwoQueues.m */; };
 		3E3F5F5618CEAA7500AA1E1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5518CEAA7500AA1E1B /* Foundation.framework */; };
 		3E3F5F5818CEAA7500AA1E1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5718CEAA7500AA1E1B /* CoreGraphics.framework */; };
 		3E3F5F5A18CEAA7500AA1E1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5F5918CEAA7500AA1E1B /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		3E3330FF18EB410600924A05 /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		3E33310118EE2A5500924A05 /* SymbolTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTable.h; sourceTree = "<group>"; };
 		3E33310218EE2A5500924A05 /* SymbolTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTable.m; sourceTree = "<group>"; };
+		3E3BFC2818F626110043879E /* StackFromTwoQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackFromTwoQueues.h; sourceTree = "<group>"; };
+		3E3BFC2918F626110043879E /* StackFromTwoQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackFromTwoQueues.m; sourceTree = "<group>"; };
 		3E3F5F5218CEAA7500AA1E1B /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3F5F5518CEAA7500AA1E1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E3F5F5718CEAA7500AA1E1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 				3E3330FF18EB410600924A05 /* BinarySearchTree.m */,
 				3E33310118EE2A5500924A05 /* SymbolTable.h */,
 				3E33310218EE2A5500924A05 /* SymbolTable.m */,
+				3E3BFC2818F626110043879E /* StackFromTwoQueues.h */,
+				3E3BFC2918F626110043879E /* StackFromTwoQueues.m */,
 				3E3F5F6D18CEAA7500AA1E1B /* Images.xcassets */,
 				3E3F5F5C18CEAA7500AA1E1B /* Supporting Files */,
 			);
@@ -315,6 +320,7 @@
 				3E5DA1FD18E6237A00951671 /* SetOfStacks.m in Sources */,
 				3E3F5F9218CEAB2200AA1E1B /* ArraysAndStrings.m in Sources */,
 				3E5D886818D6948B00361EC8 /* Sorts.m in Sources */,
+				3E3BFC2A18F626110043879E /* StackFromTwoQueues.m in Sources */,
 				3E3F5F8C18CEAA8F00AA1E1B /* Node.m in Sources */,
 				3E33310018EB410600924A05 /* BinarySearchTree.m in Sources */,
 				3E3330FD18EB403100924A05 /* TreeNode.m in Sources */,

@@ -15,5 +15,8 @@
 + (BOOL)isPermutation:(NSString *)string andAnotherString:(NSString *)anotherString;
 + (NSString *)stringCompression:(NSString *)string;
 + (void)fizzbuzz:(int)i;
++ (int)maxDifference:(int[])arr andArraySize:(int)arraySize;
++ (BOOL)openersAndClosers:(NSString *)string;
+- (void)reverseStringInPlace:(int[])args;
 
 @end
