@@ -26,19 +26,15 @@
 
 - (void)viewDidLoad
 {
-    StackFromTwoQueues *queueFromStack = [[StackFromTwoQueues alloc] init];
+    int args[7] = {-10,2,3,-2,0,5,-15};
     
-    [queueFromStack enqueue:1];
-    [queueFromStack enqueue:2];
-    [queueFromStack enqueue:3];
-
+    ArraysAndStrings *a = [[ArraysAndStrings alloc] init];
     
-    NSLog(@"%d",[queueFromStack dequeue]);
-    NSLog(@"%d",[queueFromStack dequeue]);
-    NSLog(@"%d",[queueFromStack dequeue]);
-
-
-
+    NSLog(@"sum:%d",[a largestSum:args andLength:7]);
+    
+    NSString *string = [NSString stringWithFormat:@"civic"];
+    
+    NSLog(@"has palindrom:%d",[a has_palindrome_permutation:string]);
 
 }
 

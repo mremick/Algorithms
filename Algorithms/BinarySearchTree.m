@@ -7,6 +7,7 @@
 //
 
 #import "BinarySearchTree.h"
+#import "Stack.h"
 
 
 @implementation BinarySearchTree
@@ -321,6 +322,46 @@
     return [self bstFromArray:array andBeginning:0 andEnd:end - 1];
 }
 
+
+- (BOOL)bst_checker
+{
+    int upper_bound = 0;
+    int lower_bound = 0;
+    
+    Stack *stack = [[Stack alloc] init];
+    
+    [stack push:self.root.data];
+    [stack push:lower_bound];
+    [stack push:upper_bound];
+    
+    while (![stack isEmpty]) {
+        TreeNode *node = [[TreeNode alloc] initWithData:[stack pop]];
+        lower_bound = [stack pop];
+        upper_bound = [stack pop];
+        
+        if (node.data < lower_bound || node.data > upper_bound) {
+            return NO;
+        }
+        
+        if (node.leftNode) {
+            [stack push:node.leftNode.data];
+            [stack push:lower_bound];
+            [stack push:MIN(node.data, upper_bound)];
+        }
+        
+        if (node.rightNode) {
+            [stack push:node.rightNode.data];
+            [stack push:MAX(lower_bound, node.data)];
+            [stack push:upper_bound];
+        }
+        
+        NSLog(@"loop");
+        
+        
+    }
+    
+    return YES;
+}
 
 
 

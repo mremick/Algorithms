@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TreeNode.h"
 
 @interface Node : NSObject
 
 @property (nonatomic) int data;
 @property (nonatomic) char character; 
 @property (strong,nonatomic) Node *next;
-@property (nonatomic) int min; 
+@property (nonatomic) int min;
+@property (strong,nonatomic) TreeNode *tNode; 
 
 - (id)initWithData:(int)data;
 - (id)initWithChar:(char)character;

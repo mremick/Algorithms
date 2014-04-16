@@ -18,9 +18,10 @@
 - (void)push:(int)item;
 - (void)pushChar:(char)character;
 - (char)popChar;
-
 - (int)peek;
 - (int)min;
-- (void)printStack; 
+- (void)printStack;
+- (BOOL)isEmpty;
+- (void)pushID:(id)object; 
 
 @end

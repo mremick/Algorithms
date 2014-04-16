@@ -78,6 +78,7 @@
 
 + (NSString *)stringCompression:(NSString *)string
 {
+    
     int characterCount = 1;
     NSString *compressedString = [NSString new];
     
@@ -187,7 +188,203 @@
     return isClosed; 
 }
 
+- (int)findLastParenthesis:(NSString *)string andIndex:(int)index
+{
+    int counter = 1;
+    
+    for (int i = index + 1; i < string.length; i++) {
+        char character = [string characterAtIndex:i];
+        
+        if (counter == 0) {
+            return i;
+        }
+        
+        if (character == '(') {
+            ++counter;
+        } else if (character == ')'){
+            --counter;
+        }
+    }
+    
+    return 0;
+}
 
+- (float)stockProfit:(float[])array andLength:(int)length;
+{
+    float low = array[0];
+    float profit = 0;
+    
+    for (int i = 0; i < length; i++) {
+        if (array[i] < low) {
+            low = array[i];
+        }
+        
+        if (array[i] - low > profit) {
+            profit = array[i] - low;
+        }
+    }
+    
+    return profit; 
+    
+}
+- (int)duplicatesInAnArray:(int[])array andLendth:(int)index
+{
+    int holder[index];
+    
+    for (int i = 0; i < index; i++) {
+        if (holder[array[i]] == 1) {
+            return array[i];
+        } else {
+            holder[array[i]] = 1;
+        }
+    }
+    
+    return 0; 
+}
+
+- (int)sums:(int)desiredSum andValues:(int[])args andLength:(int)length
+{
+  
+    
+    return 0;
+}
+
+- (int)rotationPoint:(NSArray *)words
+{
+    
+    NSString *firstWord = [words objectAtIndex:0];
+    char firstWordCharacter = [firstWord characterAtIndex:0];
+    int floorIndex = 0;
+    int ceilingIndex = (int)words.count - 1;
+
+    while (floorIndex < ceilingIndex) {
+        int guessIndex = floorIndex + ((ceilingIndex - floorIndex)/2);
+        char guessIndexCharacter = [[words objectAtIndex:guessIndex] characterAtIndex:0];
+        
+        if (firstWordCharacter > guessIndexCharacter) {
+            //go left
+            ceilingIndex = guessIndex;
+        } else {
+            //go right
+            floorIndex = guessIndex;
+        }
+        
+        if (floorIndex + 1 == ceilingIndex) {
+            return ceilingIndex;
+        }
+        
+        
+    }
+
+    return 0;
+
+}
+
+- (int)findingAnIntegerInASortedArray:(int[])args andInt:(int)number andLength:(int)length
+{
+    int ceilingIndex = length - 1;
+    int floorIndex = 0;
+    
+    while (floorIndex < ceilingIndex) {
+        int guessIndex = floorIndex + ((ceilingIndex - floorIndex) / 2);
+        
+        if (args[guessIndex] > number) {
+            //go left
+            ceilingIndex = guessIndex;
+        } else {
+            floorIndex = guessIndex;
+        }
+        
+        if (floorIndex + 1 == ceilingIndex) {
+            return args[guessIndex];
+        }
+        
+        NSLog(@"loop");
+        
+    }
+    
+    return 0;
+}
+
+- (int)oneIntMissingInRange:(int[])args andLength:(int)range
+{
+    int rangeAdded = 0;
+    int arrayAdded = 0;
+    
+    for (int i = 1; i <= range; i++) {
+        
+        if (i < range) {
+            arrayAdded += args[i-1];
+        }
+        rangeAdded += i;
+    }
+    
+    
+    
+    return rangeAdded - arrayAdded;
+}
+
+- (BOOL)has_palindrome_permutation:(NSString *)string
+{
+    NSDictionary *parity_map = [[NSDictionary alloc] init];
+    
+    for (int i = 0; i < string.length; i++) {
+        char c = [string characterAtIndex:i];
+        
+        NSString* character = [NSString stringWithFormat:@"A%c" , c];
+
+        
+        if ([parity_map valueForKey:character]) {
+            [parity_map setValue:@0 forKey:character];
+        } else {
+            [parity_map setValue:@1 forKey:character];
+        }
+    }
+    
+    int odd_seen = 0;
+    
+    for (NSNumber *oddValue in parity_map) {
+        if ([oddValue isEqual:@0]) {
+            odd_seen++;
+        }
+    }
+    
+    if (odd_seen > 1) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (void)shuffle:(int[])args andLength:(int)length
+{
+    for (int i = 0; i < length; i++) {
+        int randomIndex = arc4random() % length;
+        int holder = args[randomIndex];
+        args[randomIndex] = args[i];
+        args[i] = holder;
+    }
+    
+    for (int j = 0; j < length; j++) {
+        NSLog(@"%d",args[j]);
+    }
+    
+}
+
+- (int)largestSum:(int[])args andLength:(int)length
+{
+    int high = args[0];
+    int old_high = args[0];
+    
+    for (int i = 0; i < length; i++) {
+        if (args[i] > high) {
+            old_high = high;
+            high = args[i];
+        }
+    }
+    
+    return high + old_high; 
+}
 
 
 

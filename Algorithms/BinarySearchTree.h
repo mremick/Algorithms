@@ -37,6 +37,7 @@
 
 - (TreeNode *)bstFromArray:(int[])args andBeginning:(int)start andEnd:(int)end;
 - (TreeNode *)createMininalBST:(int[])array andEnd:(int)end;
+- (BOOL)bst_checker;
 
 
 

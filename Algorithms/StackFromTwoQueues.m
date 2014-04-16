@@ -22,24 +22,38 @@
 
 - (void)enqueue:(int)data
 {
-    [self.enqueueStack push:data];
-}
-- (int)dequeue
-{
-    
-    if (self.dequeueStack.top) {
-        return [self.dequeueStack pop];
+    Node *node = [[Node alloc] initWithData:data];
+    if (self.enqueueStack.top == nil) {
+        self.enqueueStack.top = node;
     } else {
-        Node *node = self.enqueueStack.top;
-        
-        while (node.next != nil) {
-            [self.dequeueStack push:node.data];
-            [self.enqueueStack pop];
-            node = node.next;
-            
-        }
-        return node.data;
+        node.next = self.enqueueStack.top;
+        self.enqueueStack.top = node;
     }
 }
+
+- (int)dequeue
+{
+    if (self.dequeueStack.top == nil) {
+        if (self.enqueueStack.top != nil) {
+            Node *holder = self.enqueueStack.top;
+            while (holder != nil) {
+                [self.dequeueStack push:[self.enqueueStack pop]];
+                holder = holder.next;
+            }
+            
+            return [self.dequeueStack pop];
+        } else {
+            return 0; 
+        }
+    }
+    
+    else {
+        return [self.dequeueStack pop];
+    }
+}
+
+
+
+
 
 @end

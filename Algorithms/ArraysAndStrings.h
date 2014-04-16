@@ -18,5 +18,15 @@
 + (int)maxDifference:(int[])arr andArraySize:(int)arraySize;
 + (BOOL)openersAndClosers:(NSString *)string;
 - (void)reverseStringInPlace:(int[])args;
+- (int)findLastParenthesis:(NSString *)string andIndex:(int)index;
+- (float)stockProfit:(float[])array andLength:(int)length;
+- (int)duplicatesInAnArray:(int[])array andLendth:(int)index;
+- (int)sums:(int)desiredSum andValues:(int[])args andLength:(int)length;
+- (int)rotationPoint:(NSArray *)words;
+- (int)findingAnIntegerInASortedArray:(int[])args andInt:(int)number andLength:(int)length;
+- (int)oneIntMissingInRange:(int[])args andLength:(int)range;
+- (BOOL)has_palindrome_permutation:(NSString *)string;
+- (void)shuffle:(int[])args andLength:(int)length;
+- (int)largestSum:(int[])args andLength:(int)length; 
 
 @end

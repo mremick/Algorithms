@@ -7,6 +7,7 @@
 //
 
 #import "Stack.h"
+#import "NodeID.h"
 
 @implementation Stack
 
@@ -52,6 +53,11 @@
     }
 }
 
+
+
+
+
+
 - (void)pushChar:(char)character
 {
     Node *t = [[Node alloc] initWithChar:character];
@@ -84,6 +90,16 @@
         n = n.next; 
     }
 }
+
+- (BOOL)isEmpty
+{
+    if (!self.top) {
+        return YES;
+    } else {
+        return NO; 
+    }
+}
+
 
 
 
